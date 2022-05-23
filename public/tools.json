@@ -1,0 +1,56 @@
+[
+    {
+        "_id": "628b72275135d25ad0565fb3",
+        "name": "Hand Hammer",
+        "picture": "https://i.ibb.co/8nkHVPr/andrew-george-YU2m-Cv-XR0w-A-unsplash.jpg",
+        "price": "$275.42",
+        "availableQuantity": 841,
+        "minimumOrder": 273,
+        "description": "hammer, tool designed for pounding or delivering repeated blows. Varied uses require a multiplicity of designs and weights. Hand hammers consist of a handle and striking head.\r\n"
+    },
+    {
+        "_id": "628b7227afc42c8ec5d3378a",
+        "name": "Side Cutter",
+        "picture": "https://i.ibb.co/YNpKxFk/everyday-basics-I8e-Tu-Mmx-Ifo-unsplash.jpg",
+        "price": "$128.92",
+        "availableQuantity": 908,
+        "minimumOrder": 476,
+        "description": "Side cutters are used to cut wire and the leads (or legs) of components in electronics. They can also be used to strip the insulation from wire.\r\n"
+    },
+    {
+        "_id": "628b72272ee29addae164910",
+        "name": "Drill Machine",
+        "picture": "https://i.ibb.co/CV1FcYx/manik-roy-UGTrlvki-A-unsplash.jpg",
+        "price": "$308.80",
+        "availableQuantity": 815,
+        "minimumOrder": 442,
+        "description": "A drilling machine is a utility tool that is generally used in the construction industry. However, they can be useful for home purposes as well.\r\n"
+    },
+    {
+        "_id": "628b7227ba3bd8b434550f14",
+        "name": "diagonal pliers",
+        "picture": "https://i.ibb.co/09kM6FG/lilzidesigns-Rj-TJBhtj-HSY-unsplash.jpg",
+        "price": "$118.59",
+        "availableQuantity": 936,
+        "minimumOrder": 304,
+        "description": "Diagonal pliers are useful for cutting copper, brass, iron, aluminium and steel wire. Lower quality versions are generally not suitable for cutting tempered steel, such as piano wire, as the jaws are not hard enough. \r\n"
+    },
+    {
+        "_id": "628b72278f98167abd68ce39",
+        "name": "Hand Saw",
+        "picture": "https://i.ibb.co/1qFTqTC/matt-artz-4-FS0ke-G0-FKw-unsplash.jpg",
+        "price": "$332.11",
+        "availableQuantity": 964,
+        "minimumOrder": 496,
+        "description": "In woodworking and carpentry, hand saws, also known as (panel saws) are used to cut pieces of wood into different shapes. This is usually done in order to join the pieces together and carve a wooden object.\r\n"
+    },
+    {
+        "_id": "628b72271b652ce88c759bb6",
+        "name": "Screw Driver",
+        "picture": "https://i.ibb.co/WnWC4Z3/tekton-jl-Y6n-V-STIw-unsplash.jpg",
+        "price": "$216.25",
+        "availableQuantity": 823,
+        "minimumOrder": 287,
+        "description": "screwdriver, tool, usually hand-operated, for turning screws with slotted heads. For screws with one straight diametral slot cut across the head.\r\n"
+    }
+]
