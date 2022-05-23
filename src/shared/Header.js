@@ -5,11 +5,12 @@ import logo from '../assets/images/logo.png';
 const Header = () => {
     const menuItem = <>
         <li><Link to='/'>Home</Link></li>
+        <li><Link to='/purchase'>Purchase</Link></li>
         <li><Link to='/blog'>Blog</Link></li>
         <li><Link to='/login'>Login</Link></li>
     </>
     return (
-        <div className="navbar bg-slate-200 shadow-lg fixed top-0 z-50">
+        <div className="navbar bg-slate-200 shadow-lg z-50">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabindex="0" className="btn btn-ghost lg:hidden">
@@ -23,7 +24,7 @@ const Header = () => {
                 <a className="btn btn-ghost normal-case text-xl p-0">Stuff-N-More</a>
             </div>
             <div className="navbar-end hidden lg:flex">
-                <ul className="menu menu-horizontal p-0">
+                <ul className="menu menu-horizontal p-0 px-2">
                     {menuItem}
                 </ul>
             </div>

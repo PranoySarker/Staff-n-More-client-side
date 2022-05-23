@@ -4,7 +4,7 @@ import drill from '../../assets/images/Drill.jpg';
 
 const Banner = () => {
     return (
-        <div className="carousel mt-20 w-full z-40">
+        <div className="carousel w-full">
             <div id="slide1" className="carousel-item relative w-full d-flex justify-center items-center">
                 <img src={drill} className="w-full" />
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
