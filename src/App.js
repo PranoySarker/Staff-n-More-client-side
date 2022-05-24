@@ -3,6 +3,7 @@ import './App.css';
 import Blog from './Pages/Blog/Blog';
 import Home from './Pages/Home/Home';
 import Login from './Pages/Login/Login';
+import Signup from './Pages/Signup/Signup';
 import Footer from './shared/Footer';
 import Header from './shared/Header';
 
@@ -14,6 +15,7 @@ function App() {
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/blog' element={<Blog></Blog>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
+        <Route path='/signup' element={<Signup></Signup>}></Route>
       </Routes>
       <Footer></Footer>
     </div>

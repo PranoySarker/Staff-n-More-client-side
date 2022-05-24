@@ -1,26 +1,29 @@
 import React from 'react';
-import SocialLogin from './SocialLogin/SocialLogin';
-import { useForm } from "react-hook-form";
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import Loading from '../../shared/Loading';
+import SocialLogin from '../Login/SocialLogin/SocialLogin';
 
-const Login = () => {
+const Signup = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
     const [
-        signInWithEmailAndPassword,
+        createUserWithEmailAndPassword,
         user,
         loading,
         error,
-    ] = useSignInWithEmailAndPassword(auth);
+    ] = useCreateUserWithEmailAndPassword(auth);
+
 
     const navigate = useNavigate();
 
+
     if (user) {
-        // console.log(user);
+        console.log(user);
         navigate('/');
     }
+
     if (loading) {
         return <Loading></Loading>
     }
@@ -33,7 +36,8 @@ const Login = () => {
 
     const onSubmit = data => {
         console.log(data)
-        signInWithEmailAndPassword(data.email, data.password);
+        createUserWithEmailAndPassword(data.email, data.password);
+
     };
     return (
         <div className=' flex justify-center items-center my-20'>
@@ -41,7 +45,7 @@ const Login = () => {
 
             <div className="card w-96 bg-base-200 shadow-xl">
                 <div className="card-body">
-                    <h2 className="text-xl font-bold text-center">LOGIN</h2>
+                    <h2 className="text-xl font-bold text-center">Signup</h2>
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <div className="form-control w-full max-w-xs">
                             <label className="label">
@@ -94,10 +98,9 @@ const Login = () => {
                             </label>
 
                         </div>
-
-                        <input className='btn w-full text-lg' type="submit" value='Login' />
+                        <input className='btn w-full text-lg' type="submit" value='Signup' />
                         {displayError}
-                        <p className='mt-3'>Don't have account?<Link to='/signup' className='text-blue-500'>Please Register</Link></p>
+                        <p className='mt-3'>Already have an account?<Link to='/login' className='text-blue-500'>Please Login</Link></p>
                     </form>
 
                     <div className="divider bg-slate-200">OR</div>
@@ -111,4 +114,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default Signup;
