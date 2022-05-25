@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Tool = ({ tool }) => {
-    const { name, picture, description, availableQuantity, minimumOrder, price } = tool;
+const Tool = ({ tool, setStaff }) => {
+    const { name, picture, description, availableQuantity, minimumOrder, price, _id } = tool;
     return (
         <div>
             <div class="card w-96 bg-base-100 shadow-2xl">
@@ -15,11 +16,13 @@ const Tool = ({ tool }) => {
                     <p>Minimum Order:{minimumOrder}</p>
                     <p>{description.slice(0, 80) + '...'}</p>
                     <div class="card-actions">
-                        <button class="btn btn-primary">Purchase</button>
+                        <button onClick={() => setStaff(tool)} class="btn btn-primary">
+                            <Link to={`/tools/${_id}`}>Purchase</Link>
+                        </button>
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 
