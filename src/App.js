@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Blog from './Pages/Blog/Blog';
+import Dashboard from './Pages/Dashboard/Dashboard';
 import Home from './Pages/Home/Home';
 import PurchaseTool from './Pages/Home/PurchaseTool';
 import Login from './Pages/Login/Login';
@@ -17,6 +18,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/blog' element={<Blog></Blog>}></Route>
+        <Route path='/dashboard' element={<Dashboard></Dashboard>}></Route>
         <Route path='/tools/:id' element=
           {
             <Protected>

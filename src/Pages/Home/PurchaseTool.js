@@ -19,7 +19,20 @@ const PurchaseTool = () => {
     }, [])
 
 
-    const onSubmit = data => console.log(data);
+    const onSubmit = (data, event) => {
+        console.log(data);
+
+        const order = {
+            productId: id,
+            productName: tool.name,
+            pricePerProduct: tool.price,
+            orderQuantity: event.target.order.value,
+            userName: user.email,
+            phoneNumber: event.target.phone.value,
+            Address: event.target.address.value
+        }
+        console.log(order);
+    };
 
     return (
         <div className='my-10'>

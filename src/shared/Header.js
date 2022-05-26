@@ -17,10 +17,13 @@ const Header = () => {
     };
 
     const menuItem = <>
-        <li><Link to='/'>Home</Link></li>
-        <li><Link to='/dashboard'>Dashboard</Link></li>
-        <li><Link to='/blog'>Blog</Link></li>
-        <li>
+        <li className='mx-1'><Link to='/'>Home</Link></li>
+        <li className='mx-1'><Link to='/blog'>Blog</Link></li>
+        <li className='mx-1'>{
+            user && <Link to='/dashboard'>Dashboard</Link>
+        }
+        </li>
+        <li className='mx-1'>
             {user ? <> <small>{user.email}</small> <button onClick={logout} className='btn btn-ghost'>Sign out</button></>
                 : <Link to='/login'>Login</Link>}
         </li>
