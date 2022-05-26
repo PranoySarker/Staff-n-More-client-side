@@ -1,7 +1,11 @@
 import { Route, Routes } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
 import Blog from './Pages/Blog/Blog';
 import Dashboard from './Pages/Dashboard/Dashboard';
+import MyOrders from './Pages/Dashboard/MyOrders';
+import MyReviews from './Pages/Dashboard/MyReviews';
 import Home from './Pages/Home/Home';
 import PurchaseTool from './Pages/Home/PurchaseTool';
 import Login from './Pages/Login/Login';
@@ -18,7 +22,15 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/blog' element={<Blog></Blog>}></Route>
-        <Route path='/dashboard' element={<Dashboard></Dashboard>}></Route>
+        <Route path='/dashboard' element=
+          {
+            <Protected>
+              <Dashboard></Dashboard>
+            </Protected>
+          }>
+          <Route index element={<MyOrders></MyOrders>}></Route>
+          <Route path='reviews' element={<MyReviews></MyReviews>}></Route>
+        </Route>
         <Route path='/tools/:id' element=
           {
             <Protected>
@@ -31,6 +43,7 @@ function App() {
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
+      <ToastContainer />
     </div>
   );
 }

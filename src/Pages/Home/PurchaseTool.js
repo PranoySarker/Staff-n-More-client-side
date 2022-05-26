@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 
 const PurchaseTool = () => {
@@ -20,7 +21,7 @@ const PurchaseTool = () => {
 
 
     const onSubmit = (data, event) => {
-        console.log(data);
+        // console.log(data);
 
         const order = {
             productId: id,
@@ -31,7 +32,25 @@ const PurchaseTool = () => {
             phoneNumber: event.target.phone.value,
             Address: event.target.address.value
         }
-        console.log(order);
+        // console.log(order);
+        fetch('http://localhost:5000/order', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(order)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.success) {
+                    toast('Order successfully place');
+                }
+                else {
+                    toast.error('You already placed this product');
+                }
+                event.target.reset();
+            })
     };
 
     return (

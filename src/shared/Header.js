@@ -42,10 +42,13 @@ const Header = () => {
                 <img className='' style={{ width: '70px', height: '50px' }} src={logo} alt="logo" />
                 <a className="btn btn-ghost normal-case text-xl p-0">Stuff-N-More</a>
             </div>
-            <div className="navbar-end hidden lg:flex">
+            <div className="navbar-center hidden lg:flex ml-10">
                 <ul className="menu menu-horizontal p-0 px-2">
                     {menuItem}
                 </ul>
+            </div>
+            <div className="navbar-end lg:hidden">
+                <label for="my-drawer-2" class="btn btn-secondary drawer-button lg:hidden">Click Me</label>
             </div>
         </div>
     );

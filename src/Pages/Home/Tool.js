@@ -16,7 +16,7 @@ const Tool = ({ tool, setStaff }) => {
                     <p>Minimum Order:{minimumOrder}</p>
                     <p>{description.slice(0, 80) + '...'}</p>
                     <div class="card-actions">
-                        <button onClick={() => setStaff(tool)} class="btn btn-primary">
+                        <button class="btn btn-primary">
                             <Link to={`/tools/${_id}`}>Purchase</Link>
                         </button>
                     </div>
