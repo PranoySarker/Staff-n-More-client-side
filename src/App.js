@@ -4,6 +4,8 @@ import Blog from './Pages/Blog/Blog';
 import Home from './Pages/Home/Home';
 import PurchaseTool from './Pages/Home/PurchaseTool';
 import Login from './Pages/Login/Login';
+import NotFound from './Pages/NotFound/NotFound';
+import Protected from './Pages/Protected/Protected';
 import Signup from './Pages/Signup/Signup';
 import Footer from './shared/Footer';
 import Header from './shared/Header';
@@ -15,9 +17,16 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/blog' element={<Blog></Blog>}></Route>
+        <Route path='/tools/:id' element=
+          {
+            <Protected>
+              <PurchaseTool></PurchaseTool>
+            </Protected>
+          }>
+        </Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<Signup></Signup>}></Route>
-        <Route path='/tools/:id' element={<PurchaseTool></PurchaseTool>}></Route>
+        <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
     </div>

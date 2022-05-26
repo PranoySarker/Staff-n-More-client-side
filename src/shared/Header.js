@@ -18,7 +18,7 @@ const Header = () => {
 
     const menuItem = <>
         <li><Link to='/'>Home</Link></li>
-        <li><Link to='/purchase'>Purchase</Link></li>
+        <li><Link to='/dashboard'>Dashboard</Link></li>
         <li><Link to='/blog'>Blog</Link></li>
         <li>
             {user ? <> <small>{user.email}</small> <button onClick={logout} className='btn btn-ghost'>Sign out</button></>

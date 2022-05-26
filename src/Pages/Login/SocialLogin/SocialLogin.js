@@ -2,15 +2,18 @@ import React from 'react';
 import auth from '../../../firebase.init';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import Loading from '../../../shared/Loading';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const SocialLogin = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
     const navigate = useNavigate();
+    const location = useLocation();
+
+    let from = location.state?.from?.pathname || "/";
 
     if (user) {
         // console.log(user);
-        navigate('/');
+        navigate(from, { replace: true });
     }
 
     let displayError;
