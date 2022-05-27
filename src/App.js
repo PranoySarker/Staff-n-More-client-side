@@ -3,8 +3,10 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
 import Blog from './Pages/Blog/Blog';
+import AllUsers from './Pages/Dashboard/AllUsers';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import MyOrders from './Pages/Dashboard/MyOrders';
+import MyProfile from './Pages/Dashboard/MyProfile';
 import MyReviews from './Pages/Dashboard/MyReviews';
 import Home from './Pages/Home/Home';
 import PurchaseTool from './Pages/Home/PurchaseTool';
@@ -30,6 +32,8 @@ function App() {
           }>
           <Route index element={<MyOrders></MyOrders>}></Route>
           <Route path='reviews' element={<MyReviews></MyReviews>}></Route>
+          <Route path='profile' element={<MyProfile></MyProfile>}></Route>
+          <Route path='users' element={<AllUsers></AllUsers>}></Route>
         </Route>
         <Route path='/tools/:id' element=
           {
