@@ -3,7 +3,7 @@ import { FaBoxOpen, FaCalendar, FaGlobe, FaHandshake } from "react-icons/fa";
 
 const Summary = () => {
     return (
-        <div className='px-12 my-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10'>
+        <div className='px-12 mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10'>
             <div className='border rounded-lg text-center bg-base-200 flex flex-wrap '>
                 <h2 className='text-5xl lg:ml-28'><FaBoxOpen /></h2>
                 <h2 className='text-3xl font-bold'>1500 Product range</h2>
