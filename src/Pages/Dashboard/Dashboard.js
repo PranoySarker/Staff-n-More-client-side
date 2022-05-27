@@ -26,7 +26,11 @@ const Dashboard = () => {
                         <li className='font-semibold'><Link to='/dashboard'>My Orders</Link></li>
                         <li className='font-semibold'><Link to='/dashboard/reviews'>My Review</Link></li>
                         <li className='font-semibold'><Link to='/dashboard/profile'>My Profile</Link></li>
-                        {admin && <><li className='font-semibold'><Link to='/dashboard/users'>All Users</Link></li></>}
+                        {admin && <>
+                            <li className='font-semibold'><Link to='/dashboard/makeAdmin'>Make Admin</Link></li>
+                            <li className='font-semibold'><Link to='/dashboard/addProduct'>Add a Product</Link></li>
+                            <li className='font-semibold'><Link to='/dashboard/manageProduct'>Manage Products</Link></li>
+                        </>}
                     </ul>
 
                 </div>
