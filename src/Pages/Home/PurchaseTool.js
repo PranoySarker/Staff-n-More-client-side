@@ -13,7 +13,7 @@ const PurchaseTool = () => {
 
 
     useEffect(() => {
-        const url = `http://localhost:5000/tools/${id}`;
+        const url = `https://lit-eyrie-61212.herokuapp.com/tools/${id}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setTool(data))
@@ -33,7 +33,7 @@ const PurchaseTool = () => {
             Address: event.target.address.value
         }
         // console.log(order);
-        fetch('http://localhost:5000/order', {
+        fetch('https://lit-eyrie-61212.herokuapp.com/order', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

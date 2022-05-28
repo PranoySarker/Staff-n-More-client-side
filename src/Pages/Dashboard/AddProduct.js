@@ -29,7 +29,7 @@ const AddProduct = () => {
                         description: data.description,
                         picture: img
                     }
-                    fetch('http://localhost:5000/tool', {
+                    fetch('https://lit-eyrie-61212.herokuapp.com/tool', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',
