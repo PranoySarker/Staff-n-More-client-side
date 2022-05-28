@@ -10,7 +10,7 @@ const Explore = () => {
                     <div className='mx-10'>
                         <h1 className="text-5xl font-bold">
                             <span className='text-yellow-400'>Explore Oure Latest Pricelist!</span> & <span className='text-purple-600'>Catalogue</span></h1>
-                        <button className="btn btn-primary mt-3">Get Started</button>
+                        <button className="btn btn-primary mt-3">See More</button>
                     </div>
                 </div>
             </div>
